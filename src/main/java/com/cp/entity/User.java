@@ -6,7 +6,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table
-public class Instagram {
+public class User {
 
     @Id
     @Column(name="id")
