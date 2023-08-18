@@ -16,17 +16,10 @@ public class SmartFlowApplication {
 
 	public static void main(String[] args) {
 
-		ApplicationContext con = SpringApplication.run(SmartFlowApplication.class, args);
-		UserService service = con.getBean("userServiceimpl", UserService.class);
+		 SpringApplication.run(SmartFlowApplication.class, args);
 
 
 
-		User user = new User();
-		insta.setId(1);
-		insta.setFirstname("prasad");
-		insta.setLastname("atla");
-		insta.setPassword("pasadu");
-		service.registerAccount(user);
 
 
 	}
