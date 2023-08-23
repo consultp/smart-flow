@@ -7,14 +7,24 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface IUserService {
-
+    // Used to fetch all the records
     public List<User> fetchdetails();
 
+    // insert the records
     public User registerdetails(User user);
+    //fetch details by usename
+    public ResponseEntity<User> Fetchuserbyname(String username);
+     // update details by username
+    public ResponseEntity<User> UpdateuserByname(String username,User user);
+     // Delete records
+    public ResponseEntity<HttpStatus> deleteuser(String username);
+     // Login purpose
+    public String authencatedUser(User user);
+   //checking Dupilecates
+    public List<Object> CheckingDupilcateemailandmobileno();
 
-    public ResponseEntity<User> findbyid(Long id);
+    // Fetching user details exceptpassword
+    public List<Object> Userdetailsexceptpassword();
+    }
 
-    public ResponseEntity<User> Updateuser(Long id,User user);
 
-    public ResponseEntity<HttpStatus> deletebyid(Long id);
-}
