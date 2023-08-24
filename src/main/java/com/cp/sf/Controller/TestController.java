@@ -38,7 +38,7 @@ public class TestController {
         return service.UpdateuserByname(username,user);
     }
 
-    @DeleteMapping("{username}")
+    @DeleteMapping("/hard/{username}")
     public ResponseEntity<HttpStatus> deletebyname(@PathVariable String username){
 
         return service.deleteuser(username);
@@ -59,5 +59,16 @@ public class TestController {
       public List<Object> Getallusersexceptpasswo(){
         return service.Userdetailsexceptpassword();
       }
+
+    @PutMapping("/soft/{username}")
+      public void softdelete1(@PathVariable String username){
+        System.out.println(username+"we passed argument");
+        service.softdelete1(username);
+      }
+      @GetMapping("/combinations/{username}")
+     public ResponseEntity<List<User>> searchbucombinations(@PathVariable String username,@PathVariable String mailid,@PathVariable Long mobileno,@PathVariable Integer active){
+        return service.findByNameorMailorPhonenoorStatus(username,mailid,mobileno,active);
+     }
+
 
 }

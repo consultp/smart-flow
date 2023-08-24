@@ -95,4 +95,25 @@ public class UserServiceimpl implements IUserService{
     public List<Object> Userdetailsexceptpassword() {
         return repo.getallUsersexceptpassword();
     }
+
+
+
+    @Override
+    public void softdelete1(String username) {
+        Optional<User> optional = repo.findById(username);
+
+        if (optional.isPresent()) {
+            User user = optional.get();
+            user.setActive(0);
+
+             repo.save(user);
+        }
+
+    }
+
+    @Override
+    public ResponseEntity<List<User>> findByNameorMailorPhonenoorStatus(String username, String mailid, Long mobileno, Integer active) {
+        return findByNameorMailorPhonenoorStatus(username,mailid,mobileno,active);
+    }
+
 }

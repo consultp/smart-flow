@@ -25,6 +25,11 @@ public interface IUserService {
 
     // Fetching user details exceptpassword
     public List<Object> Userdetailsexceptpassword();
+
+
+    public void softdelete1(String username);
+
+    public ResponseEntity<List<User>> findByNameorMailorPhonenoorStatus(String username,String mailid,Long mobileno,Integer active);
     }
 
 

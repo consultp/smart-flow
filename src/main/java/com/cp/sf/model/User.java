@@ -5,12 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 @Data
 @Entity
-@Table(name = "UserTables28")
+
 @NoArgsConstructor
 @RequiredArgsConstructor
+
 public class User {
 
 
@@ -32,7 +35,8 @@ public class User {
     @Column(unique = true)
     @NonNull
     private long mobileno;
-
+    @NonNull
+     private Integer active;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_add_id")
     @NonNull

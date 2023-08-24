@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 
 @Entity
 @Data
-@Table(name = "adress28")
+
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class Address {
