@@ -16,8 +16,8 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @NonNull
     private Long aid;
-     @NonNull
+    @NonNull
     private String city;
-     @NonNull
+    @NonNull
     private String addtype;
 }

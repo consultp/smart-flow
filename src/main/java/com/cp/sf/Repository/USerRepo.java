@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface USerRepo extends JpaRepository<User,String> {
+public interface USerRepo extends JpaRepository<User, String> {
     User findByUsername(String username);
 
 
@@ -19,6 +19,10 @@ public interface USerRepo extends JpaRepository<User,String> {
     @Query("select id,username,mailid,mobileno,active,address from User")
     List<Object> getallUsersexceptpassword();
 
+   //
+   /*@Query("select u from User u where"+" u.username like concat('%',:?1,'%'"+"or u.description like concat('%',:query,'%'")
+    List<User> findbyUserName(String query);*/
 
+    List<User> findByUsernameOrMailid(String username,String mailid);
 
 }

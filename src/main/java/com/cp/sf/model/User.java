@@ -1,31 +1,23 @@
 package com.cp.sf.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 @Data
 @Entity
-
 @NoArgsConstructor
 @RequiredArgsConstructor
 
 public class User {
 
-
-
     @NonNull
-
     @Column(unique = true)
     private Long id;
-
-     @NonNull
-     @Id
-     @Column(unique = true)
+    @NonNull
+    @Id
+    @Column(unique = true)
     private String username;
     @NonNull
     private String password;
@@ -36,7 +28,7 @@ public class User {
     @NonNull
     private long mobileno;
     @NonNull
-     private Integer active;
+    private Integer active;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_add_id")
     @NonNull
