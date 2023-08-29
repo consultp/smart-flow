@@ -1,4 +1,4 @@
-package com.cp.sf.model;
+package com.cp.sf.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
