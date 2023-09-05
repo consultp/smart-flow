@@ -94,10 +94,8 @@ public class UserServiceimpl implements IUserService {
         return repo.searchDuplicatesinEmailAndPassword();
     }
 
-    @Override
-    public List<Object> Userdetailsexceptpassword() {
-        return repo.getallUsersexceptpassword();
-    }
+
+
 
     @Override
     public void softdelete1(String username) {

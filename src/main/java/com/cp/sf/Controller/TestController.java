@@ -56,10 +56,6 @@ public class TestController {
         return service.CheckingDupilcateemailandmobileno();
     }
 
-    @GetMapping("/exceptpassword")
-    public List<Object> Getallusersexceptpasswo() {
-        return service.Userdetailsexceptpassword();
-    }
 
     @PutMapping("/soft/{username}")
     public void softdelete1(@PathVariable String username) {

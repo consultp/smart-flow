@@ -13,8 +13,7 @@ public interface USerRepo extends JpaRepository<User, String> {
     @Query("select mailid,mobileno from User group by mailid,mobileno having count(*)>1")
     List<Object> searchDuplicatesinEmailAndPassword();
 
-    @Query("select id,username,mailid,mobileno,active,address from User")
-    List<Object> getallUsersexceptpassword();
+
 
    //
    /*@Query("select u from User u where"+" u.username like concat('%',:?1,'%'"+"or u.description like concat('%',:query,'%'")

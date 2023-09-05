@@ -1,5 +1,6 @@
 package com.cp.sf.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedBy;
@@ -30,6 +31,7 @@ public class User {
     @Id
     @Column(unique = true)
     private String username;
+    @JsonIgnore
     @NonNull
     private String password;
     @NonNull

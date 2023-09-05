@@ -28,9 +28,6 @@ public interface IUserService {
     //checking Dupilecates
     public List<Object> CheckingDupilcateemailandmobileno();
 
-    // Fetching user details exceptpassword
-    public List<Object> Userdetailsexceptpassword();
-
 
     public void softdelete1(String username);
 
