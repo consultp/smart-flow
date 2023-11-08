@@ -6,6 +6,7 @@ import com.cp.sf.Exception.UserExistException;
 import com.cp.sf.Exception.UserNotFoundException;
 import com.cp.sf.Repository.USerRepo;
 import com.cp.sf.Entity.User;
+import org.hibernate.mapping.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserServiceimpl implements IUserService {
+public class  UserServiceimpl implements IUserService {
 
     public static final Logger logger=  LoggerFactory.getLogger(UserServiceimpl.class);
 
